@@ -1,6 +1,6 @@
 # helm-repository-manager
 ## Anatomia de um helm chart
-
+'''
 repository_root/
 ├── chart1/  # Directory for chart1
 │   ├── Chart.yaml
@@ -19,3 +19,4 @@ repository_root/
 │   │   └── ...
 │   └── ...
 ├── index.yaml  # Repository index file
+'''
