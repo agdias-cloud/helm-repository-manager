@@ -4,17 +4,17 @@ pipeline {
             label 'mc-client'
             defaultContainer 'jnlp'
             yaml """
-              apiVersion: v1
-              kind: Pod
-              metadata:
-                name: helm
-              spec:
-                containers:
-                  - name: mc
-                  image: minio/mc
-                  command:
-                  - cat
-                  tty: true
+            apiVersion: v1
+            kind: Pod
+            metadata:
+              name: helm
+            spec:
+              containers:
+                - name: mc
+                image: minio/mc
+                command:
+                - cat
+                tty: true
             """
         }
     }
