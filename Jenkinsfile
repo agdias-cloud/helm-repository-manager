@@ -4,17 +4,24 @@ pipeline {
             label 'mc-client'
             defaultContainer 'jnlp'
             yaml """
-            apiVersion: v1
-            kind: Pod
-            metadata:
-              name: helm
-            spec:
-              containers:
-                - name: mc
-                image: minio/mc
-                command:
-                - cat
-                tty: true
+           apiVersion: v1
+           kind: Pod
+           metadata:
+             name: mc
+           spec:
+             containers:
+             - command:
+               - cat
+               tty: true
+               securityContext:
+                 privileged: true
+               image: minio/mc
+               name: mc
+               volumeMounts:
+                 - name: varlibcontainers
+                   mountPath: /var/lib/containers
+             volumes:
+               - name varlibcontainers
             """
         }
     }
