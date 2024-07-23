@@ -1,0 +1,7 @@
+apiVersion: v1
+entries:
+  chart-name:
+    - apiVersion: {apiVersion}
+      version: ${version}
+      app-version: ${app-version}
+      description: ${description}
