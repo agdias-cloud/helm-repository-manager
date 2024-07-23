@@ -27,7 +27,7 @@ spec:
       stage('mc client test') {
         steps {
           container('mc') {
-            sh 'mc  --help'
+            sh 'mc index.yaml  http://minio.kube.local/helm-repository --help'
           }
         }
       }
