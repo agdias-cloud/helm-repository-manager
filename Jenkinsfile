@@ -17,15 +17,14 @@ pipeline {
                   tty: true
             """
         }
-    }       
-    
+    }
     stages {
-      stage('mc admin help') {
+      stage('mc client test') {
         steps {
-          container('mc) {
+          container('mc') {
             sh 'mc admin --help'
           }
         }
       }
-    }                
+    }       
 }
