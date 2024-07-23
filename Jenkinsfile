@@ -27,7 +27,7 @@ spec:
       stage('mc client test') {
         steps {
           container('mc') {
-            sh 'mc admin --help'
+            sh 'mc  --help'
           }
         }
       }
